@@ -1,0 +1,80 @@
+Name: Converters
+Type: ConvertersCategoryFolder
+Children:
+- Name: EngineeringUnitConverter1
+  Id: g=eae932ae86a7a6fcf4003a5b7ec6d233
+  Supertype: EUConverter
+  ReferenceType: HasComponent
+  Children:
+  - Name: Source
+    Type: BaseDataVariableType
+    DataType: Number
+    ReferenceType: HasSource
+    Value: {"Type":11,"Body":0.0}
+  - Name: Mode
+    Type: PropertyType
+    DataType: DynamicLinkMode
+    ReferenceType: HasComponent
+    ModellingRule: Optional
+    Value: 0
+- Name: LinearConverter1
+  Id: g=e76ccdec2d0e8c036b50611be64f625f
+  Supertype: LinearConverter
+  ReferenceType: HasComponent
+  Children:
+  - Name: Source
+    Type: BaseDataVariableType
+    DataType: Number
+    ReferenceType: HasSource
+    Value: {"Type":11,"Body":0.0}
+- Name: KeyValueConverter1
+  Id: g=f7420b1b50def1b170e0f0125ffd7f68
+  Supertype: ValueMapConverter
+  ReferenceType: HasComponent
+  Children:
+  - Name: Pairs
+    Type: BaseObjectType
+    ModellingRule: None
+    Children:
+    - Name: Pair
+      Type: ValueMapPair
+      ModellingRule: None
+      Children:
+      - Name: Key
+        Type: BaseDataVariableType
+        DataType: UInt32
+        ModellingRule: None
+        Value: 0
+      - Name: Value
+        Type: BaseDataVariableType
+        DataType: String
+        ModellingRule: None
+        Value: ""
+- Name: StringFormatter1
+  Id: g=0e23fb058939ff44d22d5d462f3cb626
+  Supertype: StringFormatter
+  ReferenceType: HasComponent
+  Children:
+  - Name: Mode
+    Type: PropertyType
+    DataType: DynamicLinkMode
+    ReferenceType: HasComponent
+    ModellingRule: Optional
+    Value: 0
+  - Name: Format
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    ReferenceType: HasParameter
+    ModellingRule: Optional
+    Value: {"LocaleId":"en-US","Text":""}
+- Name: ExpressionEvaluator1
+  Id: g=ebf3864d4c0bd99988975e928fa44149
+  Supertype: ExpressionEvaluator
+  ReferenceType: HasComponent
+  Children:
+  - Name: Expression
+    Type: BaseDataVariableType
+    DataType: String
+    ReferenceType: HasParameter
+    ModellingRule: Optional
+    Value: ""

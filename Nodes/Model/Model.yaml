@@ -1,0 +1,40 @@
+Name: Model
+Type: ModelCategoryFolder
+Children:
+- Name: Tank1
+  Id: g=e2a71a1f5eb9caa2782c0343c0befc15
+  Type: BaseObjectType
+  Children:
+  - Name: Variable1
+    Id: g=25a74e6ca733ac59224786949524bd4d
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 0
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../CommDrivers/RAEtherNet_IPDriver1/RAEtherNet_IPStation1/Tags/Program&:P35_1_Press/N7[0]"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+- Name: Tank2
+  Id: g=89efeda4ced9ba24fa08e529319e0644
+  Type: BaseObjectType
+  Children:
+  - Name: Variable1
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 0
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../CommDrivers/RAEtherNet_IPDriver1/RAEtherNet_IPStation1/Tags/Program&:P35_1_Press/N7[1]"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
