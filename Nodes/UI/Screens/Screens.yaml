@@ -6,92 +6,6 @@ Children:
   Supertype: Screen
   ReferenceType: HasComponent
   Children:
-  - Name: SpinBox1
-    Type: SpinBox
-    Children:
-    - Name: Value
-      Type: BaseDataVariableType
-      DataType: Double
-      Value: 0.0
-      Children:
-      - Name: DynamicLink
-        Type: DynamicLink
-        DataType: NodePath
-        Value: "{NodeId:ns=7;g=25a74e6c-a733-ac59-2247-86949524bd4d}"
-        Children:
-        - Name: Mode
-          Type: BaseVariableType
-          DataType: DynamicLinkMode
-          ModellingRule: Optional
-          Value: 2
-    - Name: Width
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 80.0
-    - Name: LeftMargin
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 30.0
-    - Name: TopMargin
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 80.0
-    - Name: MinValue
-      Type: BaseDataVariableType
-      DataType: Double
-      ModellingRule: Optional
-      Value: 0.0
-    - Name: MaxValue
-      Type: BaseDataVariableType
-      DataType: Double
-      ModellingRule: Optional
-      Value: 10.0
-    - Name: Format
-      Type: BaseDataVariableType
-      DataType: String
-      ModellingRule: Optional
-      Value: "n6"
-  - Name: Object1
-    Type: BaseObjectType
-  - Name: Button1
-    Type: Button
-    Children:
-    - Name: Text
-      Type: BaseDataVariableType
-      DataType: LocalizedText
-      ModellingRule: Optional
-      Value: {"LocaleId":"en-US","Text":"Button1"}
-    - Name: LeftMargin
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 0.0
-    - Name: TopMargin
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 200.0
-  - Name: Button2
-    Type: Button
-    Children:
-    - Name: Text
-      Type: BaseDataVariableType
-      DataType: LocalizedText
-      ModellingRule: Optional
-      Value: {"LocaleId":"en-US","Text":"Button1"}
-    - Name: LeftMargin
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 70.0
-    - Name: TopMargin
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 200.0
   - Name: LinearGauge1
     Type: LinearGauge
     Children:
@@ -100,53 +14,14 @@ Children:
       DataType: Float
       Value: 0.0
       Children:
-      - Name: EngineeringUnitConverter1
-        Type: EUConverter
+      - Name: DynamicLink
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "{NodeId:ns=7;g=256d177e-ef9f-d0e8-f51a-7a32152ec42c}"
         Children:
-        - Name: Source
-          Type: BaseDataVariableType
-          DataType: Number
-          ReferenceType: HasSource
-          Value: {"Type":11,"Body":0.0}
-          Children:
-          - Name: DynamicLink
-            Type: DynamicLink
-            DataType: NodePath
-            Value: "../../../../SpinBox1@Value"
-            Children:
-            - Name: Mode
-              Type: BaseVariableType
-              DataType: DynamicLinkMode
-              ModellingRule: Optional
-              Value: 2
-        - Name: RawMin
-          Type: BaseDataVariableType
-          DataType: Double
-          ReferenceType: HasParameter
-          ModellingRule: Optional
-          Value: 0.0
-        - Name: RawMax
-          Type: BaseDataVariableType
-          DataType: Double
-          ReferenceType: HasParameter
-          ModellingRule: Optional
-          Value: 10.0
-        - Name: ScaledMin
-          Type: BaseDataVariableType
-          DataType: Double
-          ReferenceType: HasParameter
-          ModellingRule: Optional
-          Value: 0.0
-        - Name: ScaledMax
-          Type: BaseDataVariableType
-          DataType: Double
-          ReferenceType: HasParameter
-          ModellingRule: Optional
-          Value: 100.0
         - Name: Mode
-          Type: PropertyType
+          Type: BaseVariableType
           DataType: DynamicLinkMode
-          ReferenceType: HasComponent
           ModellingRule: Optional
           Value: 2
     - Name: MinValue
@@ -173,155 +48,275 @@ Children:
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 170.0
+      Value: 50.0
     - Name: TopMargin
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 100.0
-  - Name: Tank1
-    Type: Tank
+      Value: 85.0
+  - Name: LinearGauge2
+    Type: LinearGauge
     Children:
-    - Name: LinearGauge1
-      Type: LinearGauge
+    - Name: Value
+      Type: BaseDataVariableType
+      DataType: Float
+      Value: 0.0
       Children:
-      - Name: Value
-        Type: BaseDataVariableType
-        DataType: Float
-        Value: 0.0
+      - Name: DynamicLink
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "{NodeId:ns=7;g=204027a0-c9d1-e87b-fa2e-b8a29333905b}"
         Children:
-        - Name: DynamicLink
-          Type: DynamicLink
-          DataType: NodePath
-          Value: "../../TankId@Pointer@Value"
-      - Name: MinValue
-        Type: BaseDataVariableType
-        DataType: Float
-        Value: 0.0
-      - Name: MaxValue
-        Type: BaseDataVariableType
-        DataType: Float
-        Value: 100.0
-      - Name: WarningZones
-        Type: BaseObjectType
-    - Name: TankId
-      Type: Alias
-      DataType: NodeId
-      Value: {"IdType":2,"Id":"e2a71a1f5eb9caa2782c0343c0befc15","Namespace":7}
-      Children:
-      - Name: Kind
-        Type: PropertyType
-        DataType: NodeId
-        Value: {"IdType":2,"Id":"e2a71a1f5eb9caa2782c0343c0befc15","Namespace":7}
-    - Name: Label1
-      Type: Label
-      Children:
-      - Name: Text
-        Type: BaseDataVariableType
-        DataType: LocalizedText
-        Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
-        Children:
-        - Name: DynamicLink
-          Type: DynamicLink
-          DataType: NodePath
-          Value: "../..@DisplayName"
-    - Name: LeftMargin
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 30.0
-    - Name: TopMargin
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 260.0
-    - Name: Height
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 260.0
+        - Name: Mode
+          Type: BaseVariableType
+          DataType: DynamicLinkMode
+          ModellingRule: Optional
+          Value: 2
+    - Name: MinValue
+      Type: BaseDataVariableType
+      DataType: Float
+      Value: 0.0
+    - Name: MaxValue
+      Type: BaseDataVariableType
+      DataType: Float
+      Value: 100.0
+    - Name: WarningZones
+      Type: BaseObjectType
     - Name: Width
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 280.0
-  - Name: Tank2
-    Type: Tank
+      Value: 328.0
+    - Name: Height
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 35.0
+    - Name: LeftMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 50.0
+    - Name: TopMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 175.0
+  - Name: LinearGauge3
+    Type: LinearGauge
     Children:
-    - Name: LinearGauge1
-      Type: LinearGauge
+    - Name: Value
+      Type: BaseDataVariableType
+      DataType: Float
+      Value: 0.0
       Children:
-      - Name: Value
-        Type: BaseDataVariableType
-        DataType: Float
-        Value: 0.0
+      - Name: DynamicLink
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "{NodeId:ns=7;g=8bad86df-c580-9f97-ef43-20d3137f1325}"
         Children:
+        - Name: Mode
+          Type: BaseVariableType
+          DataType: DynamicLinkMode
+          ModellingRule: Optional
+          Value: 2
+    - Name: MinValue
+      Type: BaseDataVariableType
+      DataType: Float
+      Value: 0.0
+    - Name: MaxValue
+      Type: BaseDataVariableType
+      DataType: Float
+      Value: 100.0
+    - Name: WarningZones
+      Type: BaseObjectType
+    - Name: Width
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 328.0
+    - Name: Height
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 35.0
+    - Name: LeftMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 50.0
+    - Name: TopMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 255.0
+  - Name: Trend1
+    Type: Trend
+    Children:
+    - Name: Pens
+      Type: BaseObjectType
+      Children:
+      - Name: VariableToSample1
+        Type: TrendPen
+        DataType: BaseDataType
+        Children:
+        - Name: Thickness
+          Type: BaseDataVariableType
+          DataType: Size
+          Value: -1.0
+        - Name: Enabled
+          Type: BaseDataVariableType
+          DataType: Boolean
+          Value: true
+        - Name: Color
+          Type: BaseDataVariableType
+          DataType: Color
+          ModellingRule: Optional
+          Value: "#1b5583"
         - Name: DynamicLink
           Type: DynamicLink
           DataType: NodePath
-          Value: "../../TankId@Pointer@Value"
+          Value: "../../Model/VariablesToLog/VariableToSample1/LastValue"
+          Children:
+          - Name: Mode
+            Type: BaseVariableType
+            DataType: DynamicLinkMode
+            ModellingRule: Optional
+            Value: 2
+      - Name: VariableToSample2
+        Type: TrendPen
+        DataType: BaseDataType
+        Children:
+        - Name: Thickness
+          Type: BaseDataVariableType
+          DataType: Size
+          Value: -1.0
+        - Name: Enabled
+          Type: BaseDataVariableType
+          DataType: Boolean
+          Value: true
+        - Name: Color
+          Type: BaseDataVariableType
+          DataType: Color
+          ModellingRule: Optional
+          Value: "#f3da08"
+        - Name: DynamicLink
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../Model/VariablesToLog/VariableToSample2/LastValue"
+          Children:
+          - Name: Mode
+            Type: BaseVariableType
+            DataType: DynamicLinkMode
+            ModellingRule: Optional
+            Value: 2
+      - Name: VariableToSample3
+        Type: TrendPen
+        DataType: BaseDataType
+        Children:
+        - Name: Thickness
+          Type: BaseDataVariableType
+          DataType: Size
+          Value: -1.0
+        - Name: Enabled
+          Type: BaseDataVariableType
+          DataType: Boolean
+          Value: true
+        - Name: Color
+          Type: BaseDataVariableType
+          DataType: Color
+          ModellingRule: Optional
+          Value: "#ff7514"
+        - Name: DynamicLink
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../Model/VariablesToLog/VariableToSample3/LastValue"
+          Children:
+          - Name: Mode
+            Type: BaseVariableType
+            DataType: DynamicLinkMode
+            ModellingRule: Optional
+            Value: 2
+    - Class: Reference
+      Target: ns=3;i=1129
+      Direction: Forward
+    - Name: XAxis
+      Type: DateTimeAxis
+      Children:
+      - Name: Follow
+        Type: BaseDataVariableType
+        DataType: Boolean
+        Value: true
+      - Name: Window
+        Type: BaseDataVariableType
+        DataType: Duration
+        Value: "0:00:00:5.0000000"
+      - Name: Interactive
+        Type: BaseDataVariableType
+        DataType: Boolean
+        Value: true
+      - Name: Time
+        Type: BaseDataVariableType
+        DataType: DateTime
+        Value: "1601-01-01T00:00:00.0000000"
+    - Name: YAxis
+      Type: ValueAxis
+      Children:
       - Name: MinValue
         Type: BaseDataVariableType
-        DataType: Float
+        DataType: Size
         Value: 0.0
       - Name: MaxValue
         Type: BaseDataVariableType
-        DataType: Float
+        DataType: Size
         Value: 100.0
-      - Name: WarningZones
-        Type: BaseObjectType
-    - Name: TankId
-      Type: Alias
-      DataType: NodeId
-      Value: {"IdType":2,"Id":"89efeda4ced9ba24fa08e529319e0644","Namespace":7}
-      Children:
-      - Name: Kind
-        Type: PropertyType
-        DataType: NodeId
-        Value: {"IdType":2,"Id":"e2a71a1f5eb9caa2782c0343c0befc15","Namespace":7}
-    - Name: Label1
-      Type: Label
-      Children:
-      - Name: Text
+      - Name: AutoScale
         Type: BaseDataVariableType
-        DataType: LocalizedText
-        Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
-        Children:
-        - Name: DynamicLink
-          Type: DynamicLink
-          DataType: NodePath
-          Value: "../..@DisplayName"
-    - Name: LeftMargin
+        DataType: Boolean
+        Value: false
+      - Name: Interactive
+        Type: BaseDataVariableType
+        DataType: Boolean
+        Value: true
+    - Name: LegendVisible
+      Type: BaseDataVariableType
+      DataType: Boolean
+      Value: true
+    - Name: Width
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
       Value: 340.0
-    - Name: TopMargin
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 260.0
     - Name: Height
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 260.0
-    - Name: Width
+      Value: 380.0
+    - Name: ReferenceTimeZone
+      Type: BaseDataVariableType
+      DataType: ReferenceTimeZone
+      ModellingRule: Optional
+      Value: 1
+    - Name: LeftMargin
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 280.0
-- Name: Screen2
-  Id: g=1ce67d3be4f970ace4556ed7e9bd249a
-  Supertype: Screen
-  ReferenceType: HasComponent
-  Children:
-  - Name: Object1
-    Type: BaseObjectType
-- Name: Screen3
-  Id: g=b97a443c99018a30b54e04582bace830
-  Supertype: Screen
-  ReferenceType: HasComponent
-  Children:
-  - Name: Object1
-    Type: BaseObjectType
+      Value: 440.0
+    - Name: TopMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 50.0
+    - Name: Model
+      Type: NodePointer
+      DataType: NodeId
+      Value: {"IdType":2,"Id":"328cba23c439f9a42585cffa1bd7ea15","Namespace":7}
+      Children:
+      - Name: ItemKind
+        Type: PropertyType
+        DataType: NodeId
+        Value: {"IdType":0,"Id":0,"Namespace":-1}
+      - Name: Kind
+        Type: PropertyType
+        DataType: NodeId
+        Value: {"IdType":0,"Id":0,"Namespace":-1}
