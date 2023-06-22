@@ -318,3 +318,10 @@ Children:
   Children:
   - Name: Object1
     Type: BaseObjectType
+- Name: Screen3
+  Id: g=b97a443c99018a30b54e04582bace830
+  Supertype: Screen
+  ReferenceType: HasComponent
+  Children:
+  - Name: Object1
+    Type: BaseObjectType
